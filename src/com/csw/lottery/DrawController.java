@@ -11,5 +11,13 @@ public class DrawController {
 		
 		ticketGenerator.generateTicket(lotteryTicket);
 		
+		DrawGenerator drawGenerator = new DrawGenerator(drawConfiguration);
+		
+		for (int i=0; i<=1000; i++) {
+			DrawNumbers drawNumbers = new DrawNumbers();
+			drawGenerator.generateDraw(drawNumbers);
+			System.out.println(drawNumbers);
+		}
+		
 	}
 }
