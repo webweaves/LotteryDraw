@@ -1,9 +1,9 @@
 package com.csw.lottery;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+
+import com.csw.lottery.utils.NumberComparator;
 
 /**
  * a simple class to store main and bonus ball numbers
@@ -12,8 +12,8 @@ import java.util.TreeSet;
  */
 public class LotteryTicket {
 
-	private Set<Integer> mainNumbers = new TreeSet<>();
-	private Set<Integer> bonusBallNumbers = new TreeSet<>();
+	private Set<Integer> mainNumbers = new TreeSet<>(new NumberComparator());
+	private Set<Integer> bonusBallNumbers = new TreeSet<>(new NumberComparator());
 	
 	/**
 	 * add a number to the main ticket numbers
