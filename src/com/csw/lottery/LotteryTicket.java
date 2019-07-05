@@ -46,5 +46,14 @@ public class LotteryTicket {
 	public void setBonusBallNumbers(Set<Integer> bonusBallNumbers) {
 		this.bonusBallNumbers = bonusBallNumbers;
 	}
+	
+	@Override
+	public String toString() {
+		String numbers = "";
+		for (Integer i: getMainNumbers()) {
+			numbers += " "+i+" ";
+		}
+		return numbers;
+	}
 
 }
