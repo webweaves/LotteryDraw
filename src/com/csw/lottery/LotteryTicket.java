@@ -51,9 +51,9 @@ public class LotteryTicket {
 	public String toString() {
 		String numbers = "";
 		for (Integer i: getMainNumbers()) {
-			numbers += " "+i+" ";
+			numbers += i+",";
 		}
-		return numbers;
+		return numbers.substring(0,numbers.length()-1);
 	}
 
 }
